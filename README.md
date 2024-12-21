@@ -1,2 +1,2 @@
 # BMIcalculator
-BMI calculator displays results into catagories 
+BMI calculator displays results into categories

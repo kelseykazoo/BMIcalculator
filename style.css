@@ -5,6 +5,8 @@ body {
     height: 100vh;
     background-color: #f4f6fa;
     font-family: "Arial", sans-serif;
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
 }
 
 .container {
@@ -26,14 +28,15 @@ body {
 }
 
 h1 {
-    position: absolute;
-    top: 60px;
+    position: fixed;
+    top: 10px;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 36px;
+    font-size: 24px;
     color: #4f4f4f;
     text-align: center;
     margin: 0;
+    z-index: 1000;
 }
 
 p {
@@ -46,6 +49,7 @@ p {
     color: #6246ea;
     font-weight: bold;
 }
+
 input[type="text"] {
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -63,6 +67,7 @@ input[type="range"] {
     border-radius: 5px;
     outline: none;
 }
+
 input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     height: 20px;
@@ -71,6 +76,7 @@ input[type="range"]::-webkit-slider-thumb {
     background: #6246ea;
     cursor: pointer;
 }
+
 button {
     background-color: #6246ea;
     color: white;
@@ -79,15 +85,14 @@ button {
     border: none;
     border-radius: 30px;
     cursor: pointer;
-    transition:
-        background-color 0.3s ease,
-        box-shadow 0.3s ease;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 button:hover {
     background-color: #4b34c3;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
+
 #result {
     font-size: 24px;
     font-weight: bold;
@@ -103,9 +108,28 @@ button:hover {
     }
     h1 {
         font-size: 20px;
+        top: 5px;
     }
     button {
         font-size: 14px;
     }
 }
 
+form {
+    margin-top: 80px;
+    padding: 20px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+input[type="text"] {
+    width: 100%;
+}

@@ -9,25 +9,39 @@
     <body>
         <h1>BMI Calculator</h1>
         <form>
-            <label for="height">Height:</label><br />
+            <label for="height-feet">Height (ft):</label><br />
             <input
-                placeholder="cm"
-                input
+                placeholder="feet"
+                type="text"
+                id="height-feet"
+                name="height-feet"
+            /><br />
+            <label for="height-inches">Height (in):</label><br />
+            <input
+                placeholder="inches"
+                type="text"
+                id="height-inches"
+                name="height-inches"
+            /><br />
+            <label for="height">Height (cm):</label><br />
+            <input
+                placeholder="Converted to cm"
                 type="text"
                 id="height"
                 name="height"
+                readonly
             /><br />
-            <label for="weight">Weight:</label><br />
+            <label for="weight">Weight (lbs):</label><br />
             <input
                 placeholder="lbs"
-                input
                 type="text"
                 id="weight"
                 name="weight"
-            />
+            /><br />
             <button type="button" id="calculate">Calculate</button>
         </form>
         <p id="result"></p>
     </body>
     <script src="script.js"></script>
 </html>
+
